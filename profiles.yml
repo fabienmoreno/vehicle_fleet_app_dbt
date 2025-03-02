@@ -6,6 +6,6 @@ my_dbt_project:
       host: "{{ env_var('DB_HOST') }}"
       user: "{{ env_var('DB_USER') }}"
       password: "{{ env_var('DB_PASSWORD') }}"
-      port: {{ env_var('DB_PORT', '5432') | int }}
+      port: "{{ env_var('DB_PORT', '5432') | int }}"
       dbname: "{{ env_var('DB_NAME') }}"
       schema: public
