@@ -7,5 +7,5 @@ my_dbt_project:
       user: "{{ env_var('DB_USER') }}"
       password: "{{ env_var('DB_PASSWORD') }}"
       port: "{{ env_var('DB_PORT', '5432') | int }}"
-      dbname: "{{ env_var('DB_NAME') }}"
-      schema: public
+      dbname: "dbt_target"   # Target destination database for models
+      schema: public         # This can be adjusted as needed
