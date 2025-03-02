@@ -1,0 +1,18 @@
+name: fleet_mgt_dbt
+version: '1.0'
+config-version: 2
+
+# The profile name defined in your ~/.dbt/profiles.yml or via the DBT_PROFILES_DIR env variable
+profile: my_dbt_project
+
+# Define where your model files are located
+source-paths: ["models"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+# Optional: set default materializations for your models
+models:
+  fleet_mgt_dbt:
+    +materialized: view
