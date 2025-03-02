@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: raw
-    database: "postgres"   # Source raw database
+  - name: public  # or you can rename this to 'raw'
+    database: "dbt_target"  # because the foreign table now exists in dbt_target
     schema: public
     tables:
       - name: vehicle
