@@ -1,5 +1,3 @@
--- models/example_model.sql
-
 with vehicle_data as (
     select
         id,
@@ -20,6 +18,5 @@ select
     number_of_seats,
     date_first_registration,
     created_at,
-    -- Calculate vehicle age in years
     date_part('year', age(current_date, date_first_registration)) as vehicle_age
-from vehicle_data;
+from vehicle_data
